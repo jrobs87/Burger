@@ -44,27 +44,27 @@ When trying to connect remotely to your Heroku database on an open network such 
 
 6. DONE // Install MySQL npm package: `npm install mysql`.
 
-7. Require the following npm packages inside of the server.js file:
+7. DONE // Require the following npm packages inside of the server.js file:
    * express
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+1. DONE // Inside your `burger` directory, create a folder named `db`.
 
-2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
+2. DONE // In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
 
-   * Create the `burgers_db`.
-   * Switch to or use the `burgers_db`.
-   * Create a `burgers` table with these fields:
-     * **id**: an auto incrementing int that serves as the primary key.
-     * **burger_name**: a string.
-     * **devoured**: a boolean.
+   * DONE // Create the `burgers_db`.
+   * DONE // Switch to or use the `burgers_db`.
+   * DONE // Create a `burgers` table with these fields:
+     DONE // * **id**: an auto incrementing int that serves as the primary key.
+     DONE // * **burger_name**: a string.
+     DONE // * **devoured**: a boolean.
 
-3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+3. DONE // Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+4. DONE // Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
-5. Now you're going to run these SQL files.
+5. SKIPPED - CANNOT GET MYSQL CLI RUNNING // Now you're going to run these SQL files.
 
    * Make sure you're in the `db` folder of your app.
 
@@ -78,13 +78,13 @@ When trying to connect remotely to your Heroku database on an open network such 
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. DONE // Inside your `burger` directory, create a folder named `config`.
 
-2. Create a `connection.js` file inside `config` directory.
+2. PARTIAL // Create a `connection.js` file inside `config` directory.
 
-   * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   * DONE // Inside the `connection.js` file, setup the code to connect Node to MySQL.
 
-   * Export the connection.
+   * DONE // Export the connection.
 
 3. Create an `orm.js` file inside `config` directory.
 
