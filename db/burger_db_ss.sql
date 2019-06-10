@@ -17,7 +17,7 @@ INSERT INTO burgers (burger_name, devoured)
 VALUES ("Turkey Burger", false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Royale with Chees", false);
+VALUES ("Royale with Cheese", false);
 
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Black Bean Burger", false);

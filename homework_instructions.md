@@ -80,58 +80,58 @@ When trying to connect remotely to your Heroku database on an open network such 
 
 1. DONE // Inside your `burger` directory, create a folder named `config`.
 
-2. PARTIAL // Create a `connection.js` file inside `config` directory.
+2.  DONE  // Create a `connection.js` file inside `config` directory.
 
    * DONE // Inside the `connection.js` file, setup the code to connect Node to MySQL.
 
    * DONE // Export the connection.
 
-3. Create an `orm.js` file inside `config` directory.
+3. DONE // Create an `orm.js` file inside `config` directory.
 
-   * Import (require) `connection.js` into `orm.js`
+   * DONE // Import (require) `connection.js` into `orm.js`
 
-   * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+   * DONE //  In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
      * `selectAll()`
      * `insertOne()`
      * `updateOne()`
 
-   * Export the ORM object in `module.exports`.
+   *  DONE // Export the ORM object in `module.exports`.
 
 #### Model setup
 
 * Inside your `burger` directory, create a folder named `models`.
 
-  * In `models`, make a `burger.js` file.
+  *  DONE // In `models`, make a `burger.js` file.
 
-    * Inside `burger.js`, import `orm.js` into `burger.js`
+    * DONE //  Inside `burger.js`, import `orm.js` into `burger.js`
 
-    * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+    * DONE //  Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
 
-    * Export at the end of the `burger.js` file.
+    * DONE //  Export at the end of the `burger.js` file.
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. DONE // Inside your `burger` directory, create a folder named `controllers`.
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2.  DONE // In `controllers`, create the `burgers_controller.js` file.
 
-3. Inside the `burgers_controller.js` file, import the following:
+3.  DONE // Inside the `burgers_controller.js` file, import the following:
 
    * Express
    * `burger.js`
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4.  DONE // Create the `router` for the app, and export the `router` at the end of your file.
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1.  DONE // Inside your `burger` directory, create a folder named `views`.
 
-   * Create the `index.handlebars` file inside `views` directory.
+   *  DONE // Create the `index.handlebars` file inside `views` directory.
 
-   * Create the `layouts` directory inside `views` directory.
+   *  DONE // Create the `layouts` directory inside `views` directory.
 
-     * Create the `main.handlebars` file inside `layouts` directory.
+     *  DONE // Create the `main.handlebars` file inside `layouts` directory.
 
      * Setup the `main.handlebars` file so it's able to be used by Handlebars.
 
