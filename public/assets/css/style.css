@@ -1,0 +1,14 @@
+#jumbotron-burger {
+    background-image: url("../img/burger.jpg");
+    background-position: cover;
+    color: white;
+}
+
+.btn-devour {
+    position: absolute;
+    right: 16px;
+}
+
+.col-md-6 {
+    margin-top:  16px;
+}

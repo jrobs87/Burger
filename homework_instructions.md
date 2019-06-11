@@ -133,11 +133,11 @@ When trying to connect remotely to your Heroku database on an open network such 
 
      *  DONE // Create the `main.handlebars` file inside `layouts` directory.
 
-     * Setup the `main.handlebars` file so it's able to be used by Handlebars.
+     * DONE // Setup the `main.handlebars` file so it's able to be used by Handlebars.
 
-     * Setup the `index.handlebars` to have the template that Handlebars can render onto.
+     * DONE // Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
-     * Create a button in `index.handlebars` that will submit the user input into the database.
+     * DONE // Create a button in `index.handlebars` that will submit the user input into the database.
 
 #### Directory structure
 

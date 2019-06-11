@@ -17,11 +17,18 @@ const burger = {
   },
 
   // update burger
-  update: function (table, burger_new, burger_old) {
-    orm.updateOne(table, burger_new, burger_old, function (result) {
-      cb(result);
-    });
-  },
+//   update: function (table, burger_new, burger_old) {
+//     orm.updateOne(table, burger_new, burger_old, function (result) {
+//       cb(result);
+//     });
+//   },
+// };
+
+update: function (table, id, devoured) {
+  orm.updateOne(table, id, devoured, function (result) {
+    cb(result);
+  });
+},
 };
 
 module.exports = burger;

@@ -3,30 +3,31 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 const table = 'burgers'; // burgers table
-
-// TESTING
-const burger_name = 'testy burgs';
-const burger_old = 'Royale with Chees';
-const burger_new = 'ZIPPPY BURGER BRO';
-// TESTING
+const devoured = 1; // devoured true
 
 router.get('/', function (req, res) {
     burger.all(table, function (result) {
-        res.send(result);
+        var hbsObject = {
+            burgers: result
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
     });
 });
 
 router.post('/api/addBurger', function (req, res) {
-    burger.add(table, burger_name);
-    res.send(`Inserted '${burger_name}' into db!`);
-    console.log(`Inserted '${burger_name}' into db!`)
+    burger_name = req.body.burger_name;
+    burger.add(table, burger_name); // calls add function from model
+    console.log(`Inserted '${burger_name}' into db!`);
 });
 
-router.put('/api/updateBurger', function(req, res) {
-    burger.update(table, burger_new, burger_old);
-    res.send(`Changed ${burger_old} to ${burger_new}`);
-    console.log(`Changed ${burger_old} to ${burger_new}`)
-})
+router.put('/api/updateBurger', function (req, res) {
+    console.log(req.body);
+    let id = req.body.burger_id;
+    burger.update(table, id, devoured);
+    // res.render("index");
+   // NEED TO RE_RENDER PAGE AFTER UPDATE?????
+});
 
 module.exports = router;
 

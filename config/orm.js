@@ -26,8 +26,18 @@ const orm = {
         // console.log(queryString)
     },
 
-    updateOne: function (table, burger_new, burger_old) {
-        let queryString = `UPDATE ${table} SET burger_name ='${burger_new}' WHERE burger_name = '${burger_old}'`;
+    // updateOne: function (table, burger_new, burger_old) {
+    //     let queryString = `UPDATE ${table} SET burger_name ='${burger_new}' WHERE burger_name = '${burger_old}'`;
+    //     con.query(queryString, function (err, result) {
+    //         if (err) throw err;
+    //         // console.log(result);
+    //     });
+
+    //     // console.log(queryString)
+    // }
+
+    updateOne: function (table, id, devoured) {
+        let queryString = `UPDATE ${table} SET devoured ='${devoured}' WHERE id = '${id}'`;
         con.query(queryString, function (err, result) {
             if (err) throw err;
             // console.log(result);
@@ -35,6 +45,7 @@ const orm = {
 
         // console.log(queryString)
     }
+
 
 }
 

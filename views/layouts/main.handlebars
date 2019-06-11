@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Cats!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/public/cats.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<title>Burgers!</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	{{{ body }}}
+
+	<script>
+		$(document).ready(function () {
+			$('.btn-devour').on('click', function () {
+				id = $(this).attr('data-id');
+				console.log(id);
+				$.post()
+			});
+
+			$('#btn-add-burger').on('click', function () {
+				let burger = $('#burger_name').val();
+				if (burger === '') {
+					alert('No one likes an empty bun!  What burger do you want?')
+				} else {
+					$.ajax({
+						type: "POST",
+						url: '/api/addBurger',
+						data: {
+							burger_name: burger
+						},
+						success: console.log(`Added burger to dB`),
+						dataType: JSON
+					});
+				};
+			});
+
+			$('.btn-devour').on('click', function () {
+				let id = $(this).attr("data-id");
+
+				$.ajax({
+					type: "PUT",
+					url: '/api/updateBurger',
+					data: {
+						burger_id: id
+					},
+					success: console.log(`Devoured`),
+					dataType: JSON
+				});
+			});
+		});
+	</script>
+</body>
+
 </html>
