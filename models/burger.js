@@ -24,9 +24,9 @@ const burger = {
 //   },
 // };
 
-update: function (table, id, devoured) {
+update: function (table, id, devoured, cb) {
   orm.updateOne(table, id, devoured, function (result) {
-    cb(result);
+    cb(result)
   });
 },
 };

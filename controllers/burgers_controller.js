@@ -10,21 +10,34 @@ router.get('/', function (req, res) {
         var hbsObject = {
             burgers: result
         };
-        console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
 
+router.get('/api/allBurgers', function(req, res) {
+    burger.all(table, function (result) {
+        var hbsObject = {
+            burgers: result
+        };
+        res.json(result);
+    });
+})
+
 router.post('/api/addBurger', function (req, res) {
-    burger_name = req.body.burger_name;
+   const burger_name = req.body.burger_name;
     burger.add(table, burger_name); // calls add function from model
-    console.log(`Inserted '${burger_name}' into db!`);
+    // res.send('entered into the DB').status(200).end()
+    res.redirect('/');
 });
 
-router.put('/api/updateBurger', function (req, res) {
-    console.log(req.body);
-    let id = req.body.burger_id;
-    burger.update(table, id, devoured);
+router.put('/api/updateBurger/:id', function (req, res) {
+    let id = req.params.id
+    console.log(id)
+    burger.update(table, id, devoured, function(result){
+        console.log(result)
+    });
+    res.send('updated')
+    // res.send('eaten').status(200).end()
     // res.render("index");
    // NEED TO RE_RENDER PAGE AFTER UPDATE?????
 });

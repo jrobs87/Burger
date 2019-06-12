@@ -11,7 +11,7 @@ const orm = {
         con.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result); 
-            console.log(result);
+
         });
     },
 
@@ -36,11 +36,13 @@ const orm = {
     //     // console.log(queryString)
     // }
 
-    updateOne: function (table, id, devoured) {
+    updateOne: function (table, id, devoured, cb) {
         let queryString = `UPDATE ${table} SET devoured ='${devoured}' WHERE id = '${id}'`;
+        console.log(queryString)
         con.query(queryString, function (err, result) {
             if (err) throw err;
             // console.log(result);
+            cb(result);
         });
 
         // console.log(queryString)

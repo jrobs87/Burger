@@ -15,14 +15,9 @@
 
 	<script>
 		$(document).ready(function () {
-			$('.btn-devour').on('click', function () {
-				id = $(this).attr('data-id');
-				console.log(id);
-				$.post()
-			});
-
 			$('#btn-add-burger').on('click', function () {
 				let burger = $('#burger_name').val();
+
 				if (burger === '') {
 					alert('No one likes an empty bun!  What burger do you want?')
 				} else {
@@ -32,24 +27,22 @@
 						data: {
 							burger_name: burger
 						},
-						success: console.log(`Added burger to dB`),
 						dataType: JSON
-					});
+					})
+					.then(function() {
+						location.reload()
+					})
 				};
 			});
 
 			$('.btn-devour').on('click', function () {
 				let id = $(this).attr("data-id");
-
 				$.ajax({
 					type: "PUT",
-					url: '/api/updateBurger',
-					data: {
-						burger_id: id
-					},
-					success: console.log(`Devoured`),
+					url: '/api/updateBurger/' + id,
 					dataType: JSON
-				});
+				})
+				location.reload()
 			});
 		});
 	</script>
