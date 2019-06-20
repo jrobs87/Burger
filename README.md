@@ -14,6 +14,11 @@ Other than that, just follow the "Getting Started" instructions to get going.
 
 ### Installing
 
+See Prerequisites and Getting Started sections
+
+### Deployed App on Heroku
+
+* [Heroku](https://burger-noms.herokuapp.com/) - live and humming
 
 ## Running the tests
 
