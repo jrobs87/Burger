@@ -42,6 +42,7 @@ To deploy to Heroku, as I have done, follow their instructions for getting an ac
 * [node.js](https://nodejs.org/en/) - runtime for javascript
 * [express](https://www.npmjs.com/package/express) - node routing
 * [mySQL](https://www.npmjs.com/package/mysql) - mysql driver for node
+* [handlebars](https://handlebarsjs.com/) - templating engine
 
 ## Contributing
 
