@@ -20,18 +20,6 @@ See Prerequisites and Getting Started sections
 
 * [Heroku](https://burger-noms.herokuapp.com/) - live and humming
 
-## Running the tests
-
-No tests are currently included.
-
-### Break down into end to end tests
-
-No tests are currently included.
-
-### And coding style tests
-
-No tests are currently included.
-
 ## Deployment
 
 The app will work locally once all "Getting Started" instructions have been followed.
@@ -43,6 +31,8 @@ To deploy to Heroku, as I have done, follow their instructions for getting an ac
 * [express](https://www.npmjs.com/package/express) - node routing
 * [mySQL](https://www.npmjs.com/package/mysql) - mysql driver for node
 * [handlebars](https://handlebarsjs.com/) - templating engine
+* [heroku](https://www.heroku.com/) - cloud hosting enviro (w/ JawsDB)
+* [heroku](https://elements.heroku.com/addons/jawsdb) - mySQL db for Heroku
 
 ## Contributing
 
